@@ -20,7 +20,12 @@ print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
         f"cadena de texto {expresión}":
         nombre = "PyMentor"
         edad = 0
-        print(f"El nombre es {nombre} y la edad es {edad}.")```
+        print(f"El nombre es {nombre} y la edad es {edad}.")
+  * El método .lower() convierte todos los caracteres de la cadena almacenada en name a minúsculas.
+  * El método .upper() convierte todos los caracteres de la cadena almacenada en name a mayúsculas.
+  * El método .title() convierte la cadena almacenada en name al formato de título, donde la primera letra de cada palabra se convierte en mayúscula y el resto en minúscula.
+```
+
 
 print("El nombre es:", nombre, "y la edad es:", edad)
   * Si se pasan varios objetos, se imprimen en el orden en que se proporcionan.
@@ -74,4 +79,15 @@ for variable in iterable: # cuerpo del bucle
 * break: Sale del bucle prematuramente.
 * continue: Salta la iteración actual y pasa a la siguiente.
 * else: Se ejecuta si el bucle termina sin ser interrumpido por break.
+
+**len(objeto)**  
+El método len() en Python se utiliza para determinar la longitud de un objeto, como una cadena, una lista, una tupla o un diccionario.  
+len() es una función incorporada en Python, lo que significa que está disponible sin necesidad de importar ningún módulo.  
+
+**split()**
+cadena.split(separador, maxsplit) --> lista = cadena.split(",", 2)  
+* cadena: La cadena que deseas dividir.
+* separador (opcional): El delimitador que se utiliza para dividir la cadena. Si no se especifica, el separador predeterminado es cualquier espacio en blanco (espacios, tabulaciones, saltos de línea).
+* maxsplit (opcional): Un número entero que especifica el número máximo de divisiones a realizar. Si se especifica, la cadena se dividirá como máximo en maxsplit subcadenas. Si no se especifica, se realizarán todas las divisiones posibles.
+* Valor de retorno: El método split() devuelve una lista de subcadenas.
 
