@@ -84,10 +84,14 @@ for variable in iterable: # cuerpo del bucle
 El método len() en Python se utiliza para determinar la longitud de un objeto, como una cadena, una lista, una tupla o un diccionario.  
 len() es una función incorporada en Python, lo que significa que está disponible sin necesidad de importar ningún módulo.  
 
-**split()**
+**split()**  
 cadena.split(separador, maxsplit) --> lista = cadena.split(",", 2)  
 * cadena: La cadena que deseas dividir.
 * separador (opcional): El delimitador que se utiliza para dividir la cadena. Si no se especifica, el separador predeterminado es cualquier espacio en blanco (espacios, tabulaciones, saltos de línea).
 * maxsplit (opcional): Un número entero que especifica el número máximo de divisiones a realizar. Si se especifica, la cadena se dividirá como máximo en maxsplit subcadenas. Si no se especifica, se realizarán todas las divisiones posibles.
 * Valor de retorno: El método split() devuelve una lista de subcadenas.
 
+**slicing [::-1]**  
+Inversión de la frase : La expresión frase[::-1] utiliza rebanado con un paso de -1, lo que significa que recorre la cadena desde el final hacia el principio, efectivamente invirtiendo la frase.  
+
+**
