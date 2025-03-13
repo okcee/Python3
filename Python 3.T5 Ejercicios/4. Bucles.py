@@ -54,3 +54,30 @@ except ValueError:
 '''Ejercicio 7
 Escribir un programa que muestre por pantalla la tabla de multiplicar del 1 al 10.
 '''
+for i in range(1,11):
+    print("Tabla del ",i)
+    for j in range(1,11):
+        print(i*j,end="\t")
+        print()
+
+'''Otro método'''
+for i in range(1, 11):
+    for j in range(1, 11):
+        print(i*j, end="\t")
+    print("")
+
+'''Ejercicio 8
+Escribir un programa que pida al usuario un número entero y muestre por pantalla un triángulo rectángulo como el de más abajo.
+1
+3 1
+5 3 1
+7 5 3 1
+9 7 5 3 1
+'''
+try:
+    numero=int(input("Escribe un número entero"))
+    for i in range(1,numero+1,2):
+        for j in range(i,0,-2):
+            print(j,end=" ")
+except ValueError:
+    print("Debes introducir un número entero")
