@@ -106,3 +106,41 @@ print(): Finalmente, la función print() muestra el resultado en la pantalla.'''
 '''Ejercicio 8
 Escribir un programa que pregunte por consola el precio de un producto en euros con dos decimales y muestre por pantalla el número de euros y el número de céntimos del precio introducido.
 '''
+precio = input("Introduce el precio del producto con dos decimales:  ")
+print(precio[:precio.find('.')], 'euros y', precio[precio.find('.')+1:], 'céntimos.')
+
+'''Ejercicio 9
+Escribir un programa que pregunte al usuario la fecha de su nacimiento en formato dd/mm/aaaa y muestra por pantalla, el día, el mes y el año. Adaptar el programa anterior para que también funcione cuando el día o el mes se introduzcan con un solo carácter.
+'''
+fecha_nacimiento = input("Introduce tu fecha de nacimiento en formato dd/mm/aaaa: ")
+dia = fecha_nacimiento[:2]
+mes = fecha_nacimiento[3:5]
+año = fecha_nacimiento[6:]
+print("Día:", dia)
+print("Mes:", mes)
+print("Año:", año)
+# Adaptar el programa anterior para que también funcione cuando el día o el mes se introduzcan con un solo carácter.
+fecha = input("Introduce la fecha de tu nacimiento en formato día/mes/año: ")
+dia = fecha[:fecha.find('/')] # Extracción del día:
+'''fecha.find('/') busca la posición de la primera barra inclinada ("/") en la cadena fecha. Esto nos indica dónde termina el día.
+fecha[:fecha.find('/')] utiliza el "slicing" de cadenas para extraer la parte de fecha que va desde el inicio hasta la posición de la primera barra inclinada. Esta parte corresponde al día.'''
+mesaño = fecha[fecha.find('/')+1:] #  extrae la parte de la cadena fecha que viene después de la primera barra inclinada. Esto incluye tanto el mes como el año.
+mes = mesaño[:mesaño.find('/')] # de manera similar a la extracción del día, esta línea extrae la parte de mesaño que corresponde al mes (antes de la segunda barra inclinada).
+año = mesaño[mesaño.find('/')+1:] # extrae la parte restante de mesaño, que corresponde al año.
+print('Día', dia)
+print('Mes', mes)
+print('Año', año)
+
+'''Ejercicio 10
+Escribir un programa que pregunte por consola por los productos de una cesta de la compra, separados por comas, y muestre por pantalla cada uno de los productos en una línea distinta.
+'''
+cesta = input('Introduce los productos de la cesta de la compra separados por comas: ')
+print(cesta.replace(',', '\n'))
+
+'''Ejercicio 11
+Escribir un programa que pregunte el nombre el un producto, su precio y un número de unidades y muestre por pantalla una cadena con el nombre del producto seguido de su precio unitario con 6 dígitos enteros y 2 decimales, el número de unidades con tres dígitos y el coste total con 8 dígitos enteros y 2 decimales.
+'''
+producto=input("Indroduce el nombre del producto")
+precio=float(input("Indroduce el precio del producto"))
+unidades=int(input("Indroduce el número de unidades"))
+print(f"{producto} Precio: {precio:06.2f} Unidades: {unidades:03} Coste total: {precio*unidades:08.2f}")
