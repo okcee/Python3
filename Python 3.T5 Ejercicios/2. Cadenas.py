@@ -95,3 +95,14 @@ else:
 '''Ejercicio 7
 Escribir un programa que pregunte el correo electrónico del usuario en la consola y muestre por pantalla otro correo electrónico con el mismo nombre (la parte delante de la arroba @) pero con dominio ceu.es.
 '''
+email = input("Introduce tu correo electrónico: ") # pide al usuario que introduzca su dirección de correo electrónico.
+print(email[:email.find('@')] + '@ceu.es')
+'''email.find('@'): Esta parte busca la posición del carácter "@" dentro de la cadena email. Devuelve el índice (la posición) de la primera aparición de "@".
+email[:email.find('@')]: Esto utiliza el "slicing" (rebanado) de cadenas para extraer la parte del correo electrónico que viene antes del "@". Por ejemplo, si el correo es "[dirección de correo electrónico eliminada]", esto extraerá "usuario".
+'@ceu.es': Esta es la parte fija que se añadirá al final.
++: El operador "+" concatena (une) las dos partes de la cadena.
+print(): Finalmente, la función print() muestra el resultado en la pantalla.'''
+
+'''Ejercicio 8
+Escribir un programa que pregunte por consola el precio de un producto en euros con dos decimales y muestre por pantalla el número de euros y el número de céntimos del precio introducido.
+'''
