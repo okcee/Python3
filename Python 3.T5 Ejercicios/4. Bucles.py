@@ -8,3 +8,49 @@ for i in range(10):
 '''Ejercicio 2
 Escribir un programa que pregunte al usuario su edad y muestre por pantalla todos los años que ha cumplido (desde 1 hasta su edad).
 '''
+edad=int(input("¿Cuántos años tienes?"))
+for i in range(edad):
+    print("Has cumplido",i+1,"años")
+
+'''Ejercicio 3
+Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla todos los números impares desde 1 hasta ese número separados por comas.
+'''
+numero=int(input("Escribe un número entero positivo"))
+for i in range(1,numero+1,2):
+    print(i,end=", ")
+
+'''Ejercicio 4
+Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla la cuenta atrás desde ese número hasta cero separados por comas.
+'''
+numero=int(input("Escribe un número entero positivo"))
+for i in range(numero,-1,-1):
+    print(i,end=", ")
+
+'''Ejercicio 5
+Escribir un programa que pregunte al usuario una cantidad a invertir, el interés anual y el número de años, y muestre por pantalla el capital obtenido en la inversión cada año que dura la inversión.
+'''
+cantidad=float(input("¿Cuanto quieres invertir?"))
+interes=float(input("¿Cuál es el interés anual?"))
+años=int(input("¿Cuántos años?"))
+for i in range(años):
+    cantidad=cantidad*(1+interes/100)
+    print("Capital tras",i+1,"años:",round(cantidad,2))
+
+'''Ejercicio 6
+Escribir un programa que pida al usuario un número entero y muestre por pantalla un triángulo rectángulo como el de más abajo, de altura el número introducido.
+*
+**
+***
+****
+*****
+'''
+try:
+    numero=int(input("Escribe un número entero"))
+    for i in range(numero):
+        print("*"*(i+1))
+except ValueError:
+    print("Debes introducir un número entero")
+
+'''Ejercicio 7
+Escribir un programa que muestre por pantalla la tabla de multiplicar del 1 al 10.
+'''
