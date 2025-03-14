@@ -94,7 +94,7 @@ cadena.split(separador, maxsplit) --> lista = cadena.split(",", 2)
 **slicing [::-1]**  
 Inversión de la frase : La expresión frase[::-1] utiliza rebanado con un paso de -1, lo que significa que recorre la cadena desde el final hacia el principio, efectivamente invirtiendo la frase.  
 
-**fin()**  
+**find()**  
 cadena.find(subcadena, inicio, fin)
 * Parámetros:
   * cadena: La cadena en la que deseas buscar la subcadena.
@@ -117,5 +117,12 @@ cadena_original.replace(cadena_a_reemplazar, cadena_reemplazo, contador)
   * replace() crea una nueva cadena con los reemplazos realizados. No modifica la cadena original.
   * replace() distingue entre mayúsculas y minúsculas. "Mundo" y "mundo" se consideran cadenas diferentes.
   * la función replace es muy util para normalizar datos, por ejemplo, cambiar todos los puntos por comas en un archivo csv.
+
+**count()**  
+secuencia.count(elemento, inicio, fin)  
+* secuencia: Es la secuencia (cadena, lista, tupla) en la que se realizará la búsqueda.
+* elemento: Es el valor que se desea contar.
+* inicio: (Opcional) Índice donde comienza la búsqueda. Si se omite, la búsqueda comienza desde el principio de la secuencia.
+* fin: (Opcional) Índice donde termina la búsqueda (no inclusivo). Si se omite, la búsqueda continúa hasta el final de la secuencia.
 
 **
