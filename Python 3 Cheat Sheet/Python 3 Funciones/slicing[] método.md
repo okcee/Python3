@@ -1,0 +1,2 @@
+**slicing [::-1]**  
+Inversión de la frase : La expresión frase[::-1] utiliza rebanado con un paso de -1, lo que significa que recorre la cadena desde el final hacia el principio, efectivamente invirtiendo la frase.  
