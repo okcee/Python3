@@ -123,11 +123,15 @@ while True:
         libro_encontrado=Libro.buscar(isbn)
         if libro_encontrado:
             libro_encontrado.prestar()
+        else:
+            print("No se puede prestar el libro porque no se encontró.")
     elif opcion == '3':
         isbn = input("Ingresa el ISBN: ")
         libro_encontrado=Libro.buscar(isbn)
         if libro_encontrado:
             libro_encontrado.devolver()
+        else:
+            print("No se puede devolver el libro porque no se encontró.")
     elif opcion == '4':
         Libro.mostrar_todos()
     elif opcion == '5':
