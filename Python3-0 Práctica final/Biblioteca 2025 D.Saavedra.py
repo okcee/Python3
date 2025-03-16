@@ -85,7 +85,7 @@ class Libro:
             print("No hay libros en la biblioteca.")
         else:
             for libro in cls.biblioteca:
-                print(libro.mostrar())  # Llamamos a print con el valor devuelto por mostrar()
+                libro.mostrar()  # Llamamos el método mostrar()
 
     @classmethod
     def buscar(cls, isbn):
