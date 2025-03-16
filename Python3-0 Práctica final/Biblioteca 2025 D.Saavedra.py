@@ -13,8 +13,8 @@ Toda la gestión se realiza dentro de una sola clase, Libro, con atributos de cl
             • prestar(self): Cambia el estado disponible a False.
             • devolver(self): Cambia el estado disponible a True.
             • mostrar(self): Muestra la información del libro.
-        - Métodos de clase:
-            • agregar(cls, titulo, autor, isbn): Crea una instancia de Libro y la agrega a biblioteca (aunque el constructor ya lo hace). Se puede usar como alternativa o para validaciones, dando más flexibilidad al código.
+        - Métodos de clase: Un método de clase que pertenece a la clase en lugar de a una instancia específica de la clase. Operan sobre la clase en sí misma.
+            • agregar(cls, titulo, autor, isbn, disponible=True): Crea una instancia de Libro y la agrega a biblioteca (aunque el constructor ya lo hace). Se puede usar como alternativa o para validaciones, dando más flexibilidad al código.
             • mostrar_todos(cls): Muestra todos los libros en biblioteca.
             • buscar(cls, isbn): Busca un libro en biblioteca por su ISBN.
     - Programa Principal:
@@ -46,9 +46,9 @@ class Libro:
         """
         if self.disponible:
             self.disponible = False
-            print(f"El libro '{self.titulo}' ha sido prestado.")
+            print(f"El libro '{self.titulo}' prestado con éxito.")
         else:
-            print(f"El libro '{self.titulo}' ya está prestado.")
+            print(f"El libro '{self.titulo}' no está disponible para prestar.")
 
     def devolver(self):
         """
@@ -64,15 +64,15 @@ class Libro:
         """
         Muestra los datos del libro y su estado de disponibilidad.
         """
-        estado = "disponible" if self.disponible else "prestado"
-        print(f"Título: {self.titulo}, Autor: {self.autor}, ISBN: {self.isbn}, Estado: {estado}")
+        estado = "Sí" if self.disponible else "No"
+        print(f"- {self.titulo} ({self.autor}) - ISBN: {self.isbn} - Disponible: {estado}")
 
     @classmethod
     def agregar(cls, titulo, autor, isbn, disponible=True):  # Se incluye el atributo disponible
         """
         Método de clase: Crea un nuevo libro y lo añade a la biblioteca.
         """
-        nuevo_libro = cls(titulo, autor, isbn, disponible) # Se crea una instancia de libro, indicando el atributo disponible.
+        nuevo_libro = cls(titulo, autor, isbn, disponible) # Se crea una nueva instancia de la clase Libro.
         #Se podría añadir más código para realizar validaciones.
         return nuevo_libro
 
@@ -85,7 +85,7 @@ class Libro:
             print("No hay libros en la biblioteca.")
         else:
             for libro in cls.biblioteca:
-                libro.mostrar()
+                print(libro.mostrar())  # Llamamos a print con el valor devuelto por mostrar()
 
     @classmethod
     def buscar(cls, isbn):
