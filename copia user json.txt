@@ -1,0 +1,33 @@
+# Dirección intérprete global de Python3: --> "C:\\Users\\Okcee\\miniconda3\\python.exe"
+
+# Copia archivo "Open User Settings" JSON (comentada)
+Nota: No se deben añadir las notas al archivo json, ya que este no las ignora.
+
+{
+  // Define la ubicación de la barra lateral en la ventana de VS Code. Los valores posibles son "left" o "right".
+  "workbench.sideBar.location": "right",
+
+  // Establece el tema de color para la interfaz de usuario de VS Code.
+  "workbench.colorTheme": "One Dark Pro Night Flat",
+
+  // Controla si el editor debe ajustar las líneas de texto largas a la ventana. Los valores posibles son "on", "off" o "wordWrapColumn".
+  "editor.wordWrap": "on",
+
+  // Habilita la función de commit inteligente de Git, que sugiere qué cambios incluir en el commit.
+  "git.enableSmartCommit": true,
+
+  // Especifica la ruta al archivo ejecutable de Python del entorno virtual que se utilizará para la extensión de Python.
+  "python.envFile": ".\\.virtEnv\\Scripts\\python.exe",
+
+  // Establece el perfil de terminal predeterminado que se utilizará en la terminal integrada de VS Code en sistemas Windows.
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+
+  // Define los perfiles de terminal disponibles en la terminal integrada de VS Code en sistemas Windows.
+  "terminal.integrated.profiles.windows": {
+    // Define un perfil llamado "Git Bash".
+    "Git Bash": {
+      // Especifica la fuente de este perfil, que en este caso es la instalación de Git Bash.
+      "source": "Git Bash",
+    }
+  }
+}

@@ -146,3 +146,8 @@ Selecciona el intérprete de Python dentro de .venv en VS Code.
 Verifica o configura python.pythonPath en la configuración del workspace (settings.json) para que apunte al intérprete de .venv.
 Abre la Terminal Integrada (con el entorno activado) y escribe python o usa la Ventana Interactiva de Python de la extensión de Python para ejecutar un REPL dentro de tu entorno virtual.
 Siguiendo estos pasos, tu entorno virtual virtualenv (o venv) se convertirá en el entorno predeterminado para tu workspace en VS Code, y podrás utilizar un REPL que se ejecute dentro de ese entorno aislado.
+
+5. Crear un archivo de requisitos
+Puede crear un archivo de requisitos que incluya todas las dependencias de su proyecto utilizando el siguiente comando:
+
+pip freeze > requirements.txt
