@@ -95,7 +95,7 @@ VS Code necesita saber qué intérprete de Python usar para tu workspace. Sigue 
 
 Abre tu proyecto en VS Code.
 Abre la Paleta de Comandos (Ctrl+Shift+P en Windows/Linux, Cmd+Shift+P en macOS).
-Escribe y selecciona "Python: Seleccionar intérprete".
+Escribe y selecciona "Python: Select interpreter".
 VS Code mostrará una lista de intérpretes de Python disponibles. Busca la ruta del intérprete python (o python3) que se encuentra dentro de tu directorio .venv. Debería ser algo como:
 Windows: .\.venv\Scripts\python.exe
 macOS/Linux: ./.venv/bin/python
@@ -149,5 +149,8 @@ Siguiendo estos pasos, tu entorno virtual virtualenv (o venv) se convertirá en 
 
 5. Crear un archivo de requisitos
 Puede crear un archivo de requisitos que incluya todas las dependencias de su proyecto utilizando el siguiente comando:
+```pip freeze > requirements.txt```
 
-pip freeze > requirements.txt
+6. Instalar paquetes desde un archivo de requisitos
+Puede instalar todas las dependencias de su proyecto desde un archivo de requisitos utilizando el siguiente comando:
+`pip install -r requirements.txt`
