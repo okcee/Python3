@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'PYworld.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',  # Nombre de la base de datos
+        'USER': 'Shiro',          # Nombre del usuario de PostgreSQL
+        'PASSWORD': '+Makeshiro83',      # Contraseña del usuario
+        'HOST': 'localhost',                  # Dirección del servidor PostgreSQL
+        'PORT': '5432',                       # Puerto predeterminado de PostgreSQL
     }
 }
 
