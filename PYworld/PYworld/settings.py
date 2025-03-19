@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
+# Importamos config desde decouple
+from decouple import config
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,12 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-sk(2mfdw$zc-nb5bmtsn+j4b5f0wg1zbx51@1=&^5xf1kuk6hs'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool) # Modo DEBUG
 
-ALLOWED_HOSTS = []
+# Allowed Hosts
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')  # Convierte a lista
 
 
 # Application definition
@@ -73,17 +77,17 @@ WSGI_APPLICATION = 'PYworld.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# Configuración de la base de datos
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',  # Nombre de la base de datos
-        'USER': 'Shiro',          # Nombre del usuario de PostgreSQL
-        'PASSWORD': 'pass',      # Contraseña del usuario
-        'HOST': 'localhost',                  # Dirección del servidor PostgreSQL
-        'PORT': '5432',                       # Puerto predeterminado de PostgreSQL
+        'NAME': config('DB_NAME'),  # Lee el nombre de la base de datos desde .env
+        'USER': config('DB_USER'),  # Lee el usuario desde .env
+        'PASSWORD': config('DB_PASSWORD'),  # Lee la contraseña desde .env
+        'HOST': config('DB_HOST', default='localhost'),  # Valor predeterminado si no se especifica
+        'PORT': config('DB_PORT', default='5432', cast=int),  # Convierte a entero
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -125,3 +129,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
