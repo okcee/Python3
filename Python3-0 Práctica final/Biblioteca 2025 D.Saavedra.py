@@ -73,7 +73,7 @@ class Libro:
         Método de clase: Crea un nuevo libro y lo añade a la biblioteca.
         """
         nuevo_libro = cls(titulo, autor, isbn, disponible) # Se crea una nueva instancia de la clase Libro.
-        #Se podría añadir más código para realizar validaciones.
+        # Se podría añadir más código para realizar validaciones, pero, el jefe de proyecto no lo especificó, por lo que se puede interpretar también que lo realizará otra persona.
         return nuevo_libro
 
     @classmethod
