@@ -9,6 +9,11 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
+# Para para cargar las variables de entorno desde el archivo .env al entorno de ejecución de tu aplicación Django.(Seguridad de datos sensibles)
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from pathlib import Path
 
@@ -35,13 +40,13 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')  # Convierte a li
 # Application definition
 
 INSTALLED_APPS = [
+    'PYworld_Apps',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'PYworld_Apps',
 ]
 
 MIDDLEWARE = [

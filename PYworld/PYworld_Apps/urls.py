@@ -15,11 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 # miProyecto/urls.py
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('PYworld_Apps.urls')),  # Asumiendo que tu aplicación se llama PYworld_Apps
-    # Otras rutas a nivel de proyecto (si las hubiera)
+    path('productos/', views.lista_productos, name='lista_productos'),
 ]
