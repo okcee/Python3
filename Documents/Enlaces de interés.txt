@@ -22,3 +22,7 @@ https://dillinger.io/
 Inteligencia Artificial
 https://gemini.google.com/app
 https://chat.qwenlm.ai/
+
+Prompts: dominar el arte de formular solicitudes, instrucciones efectivas para modelos de lenguaje de IA
+https://skills.yourlearning.ibm.com/activity/MDL-298
+
