@@ -1,0 +1,71 @@
+1. Atributos de Estilo y Diseño
+Estos atributos se utilizan principalmente para controlar la presentación visual y el diseño de los elementos HTML.
+
+- class: Especifica uno o más nombres de clase para un elemento. Se utiliza para aplicar estilos CSS a múltiples elementos con la misma clase.
+Ejemplo: <div class="contenedor"></div> (Este div pertenecerá a la clase "contenedor" y podrá ser estilizado con CSS).
+- id: Especifica un identificador único para un elemento. Se utiliza para apuntar a un elemento específico con CSS o JavaScript.
+Ejemplo: <p id="parrafo-principal"></p> (Este párrafo tiene un identificador único "parrafo-principal").
+- style: Permite aplicar estilos CSS en línea directamente a un elemento.
+Ejemplo: <p style="color: azul; font-size: 16px;"></p> (Este párrafo tendrá el texto en azul y un tamaño de fuente de 16 píxeles).
+- hidden: Oculta un elemento de la vista.
+Ejemplo: <p hidden>Este texto está oculto.</p> (Este párrafo no se mostrará en la página).
+- width: Especifica el ancho de un elemento (por ejemplo, imágenes, vídeos, tablas).
+Ejemplo: <img src="imagen.jpg" width="500"> (Esta imagen tendrá un ancho de 500 píxeles).
+- height: Especifica la altura de un elemento (por ejemplo, imágenes, vídeos, tablas).
+Ejemplo: <img src="imagen.jpg" height="300"> (Esta imagen tendrá una altura de 300 píxeles).
+- align: (Mayormente obsoleto, se prefiere CSS) Especifica la alineación horizontal de un elemento (por ejemplo, izquierda, centro, derecha).
+Ejemplo: <p align="center">Texto centrado</p> (Este párrafo estará centrado horizontalmente).
+- dir: Especifica la dirección del texto de un elemento.
+Ejemplo: <p dir="rtl">Texto de derecha a izquierda</p> (Este párrafo se mostrará de derecha a izquierda).
+
+2. Atributos de Acción
+Estos atributos están típicamente asociados con interacciones del usuario o acciones dentro de una página web, a menudo relacionados con formularios y enlaces.
+
+- href: Especifica la URL de un enlace (se usa con la etiqueta <a>).
+Ejemplo: <a href="https://www.ejemplo.com">Enlace</a> (Este enlace llevará al usuario a "https://www.ejemplo.com").
+- src: Especifica la URL de un recurso externo (por ejemplo, imágenes, vídeos, scripts).
+Ejemplo: <img src="imagen.jpg">, <video src="video.mp4"></video>, <script src="script.js"></script> (Estos ejemplos muestran cómo incluir una imagen, un vídeo y un script externo).
+- action: Especifica la URL donde se deben enviar los datos del formulario (se usa con la etiqueta <form>).
+Ejemplo: <form action="/enviar-formulario"></form> (Los datos del formulario se enviarán a "/enviar-formulario").
+- method: Especifica el método HTTP utilizado para enviar los datos del formulario (por ejemplo, "get" o "post").
+Ejemplo: <form action="/enviar-formulario" method="post"></form> (Los datos del formulario se enviarán a "/enviar-formulario" usando el método POST).
+- target: Especifica dónde abrir un documento enlazado (por ejemplo, "_blank" para una nueva ventana).
+Ejemplo: <a href="https://www.ejemplo.com" target="_blank">Enlace en nueva pestaña</a> (Este enlace se abrirá en una nueva pestaña o ventana).
+- type: Especifica el tipo de entrada (por ejemplo, "text", "password", "submit", "button") o el tipo de recurso (por ejemplo, "video/mp4").
+Ejemplo: <input type="text">, <button type="submit">Enviar</button>, <video type="video/mp4"></video> (Estos ejemplos muestran diferentes tipos de entradas y recursos).
+- name: Especifica el nombre de un elemento, a menudo usado para identificar los datos del formulario.
+Ejemplo: <input type="text" name="usuario"> (Este campo de texto se identificará como "usuario" al enviar el formulario).
+- value: Especifica el valor de un elemento de entrada (por ejemplo, el texto en un campo de texto, el valor de un botón).
+Ejemplo: <input type="text" value="Texto por defecto">, <button value="enviar">Enviar</button> (Estos ejemplos muestran cómo establecer un valor por defecto y el valor de un botón).
+- placeholder: Especifica una pista corta que describe el valor esperado de un campo de entrada.
+Ejemplo: <input type="text" placeholder="Introduce tu nombre"> (Este campo mostrará "Introduce tu nombre" como texto de ejemplo).
+- disabled: Especifica que un elemento de entrada debe estar deshabilitado.
+Ejemplo: <input type="text" disabled> (Este campo no se podrá editar).
+- readonly: Especifica que un campo de entrada es de solo lectura.
+Ejemplo: <input type="text" readonly> (Este campo mostrará un valor, pero no se podrá editar).
+- required: Especifica que un campo de entrada debe ser completado antes de enviar el formulario.
+Ejemplo: <input type="text" required> (Este campo debe ser completado para poder enviar el formulario).
+
+3. Atributos de Suceso
+Estos atributos se utilizan para activar funciones o acciones de JavaScript en respuesta a eventos específicos que ocurren en un elemento.
+
+- onclick: Activa una acción cuando se hace clic en un elemento.
+Ejemplo: <button onclick="miFuncion()">Haz clic aquí</button> (Al hacer clic en el botón, se ejecutará la función miFuncion()).
+- onmouseover: Activa una acción cuando el puntero del ratón se mueve sobre un elemento.
+Ejemplo: <div onmouseover="cambiarColor()">Pasa el ratón por encima</div> (Al pasar el ratón sobre el div, se ejecutará la función cambiarColor()).
+- onmouseout: Activa una acción cuando el puntero del ratón se mueve fuera de un elemento.
+Ejemplo: <div onmouseout="restablecerColor()">Pasa el ratón por encima</div> (Al sacar el ratón del div, se ejecutará la función restablecerColor()).
+- onchange: Activa una acción cuando el valor de un elemento de entrada cambia.
+Ejemplo: <input type="text" onchange="validarEntrada()"> (Cuando el valor del campo de texto cambie, se ejecutará la función validarEntrada()).
+- onfocus: Activa una acción cuando un elemento recibe el foco.
+Ejemplo: <input type="text" onfocus="resaltarEntrada()"> (Cuando el campo de texto reciba el foco, se ejecutará la función resaltarEntrada()).
+- onblur: Activa una acción cuando un elemento pierde el foco.
+Ejemplo: <input type="text" onblur="desresaltarEntrada()"> (Cuando el campo de texto pierda el foco, se ejecutará la función desresaltarEntrada()).
+- onload: Activa una acción cuando una página o un elemento ha terminado de cargarse.
+Ejemplo: <body onload="miFuncion()"> (Cuando el body termine de cargarse, se ejecutará la función miFuncion()).
+- onsubmit: Activa una acción cuando se envía un formulario.
+Ejemplo: <form onsubmit="validarFormulario()"> (Cuando se envíe el formulario, se ejecutará la función validarFormulario()).
+- onkeydown: Activa una acción cuando se presiona una tecla.
+Ejemplo: <input type="text" onkeydown="miFuncion()"> (Cuando se presione una tecla dentro del input, se ejecutará la función miFuncion()).
+- onkeyup: Activa una acción cuando se suelta una tecla.
+Ejemplo: <input type="text" onkeyup="miFuncion()"> (Cuando se suelte una tecla dentro del input, se ejecutará la función miFuncion()).
