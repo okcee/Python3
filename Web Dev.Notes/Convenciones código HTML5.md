@@ -28,3 +28,41 @@ Los elementos de la sección de cabecera se cargan primero. La sección de cabec
 - Hojas de estilo
 Es una buena práctica colocar las referencias a hojas de estilo en la cabecera del sitio. Esto garantiza que todos los estilos que necesita para el sitio web estarán disponibles para los elementos que los necesitan.  
 
+## Uso de las distintas listas
+
+Tanto las listas ordenadas como las listas sin ordenar implementan el elemento <li></li> para añadir elementos a sus listas.  
+
+HTML admite tres tipos de listas:  
+
+- Las listas desordenadas, que podría considerar como listas con viñetas, que se indican mediante el elemento <ul></ul>. Puede cambiar el estilo de las viñetas redondas a otro tipo de viñetas, como cuadrado o diamante, mediante una hoja de estilo o un estilo en línea.  
+
+```html
+<ul>
+<li>Elemento 1</li>
+<li>Elemento 2</li>
+<li>Elemento 3</li>
+</ul>
+```
+
+- Las listas ordenadas, como su nombre indica, están numeradas o con letras. Se crean mediante el elemento `<ol></ol>`.  
+
+```html
+<ol>
+<li>Elemento 1</li>
+<li>Elemento 2</li>
+<li>Elemento 3</li>
+</ol>
+```
+
+- Las listas de descripciones listan términos. Cada elemento de lista incluye una descripción de su término. Se crean mediante el elemento `<dl></dl>`.  
+
+```html
+<dl>
+<dt>Elemento 1</dt>
+	<dd>Descripción 1</dd>
+    <dt>Elemento 2</dt>
+            <dd>Descripción 2</dd>
+    <dt>Elemento 3</dt>
+            <dd>Descripción 3</dd>
+</dl>
+```
