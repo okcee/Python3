@@ -11,3 +11,5 @@ horas = int(input("Horas: "))
 coste = float(input("Coste: "))
 paga = calcular_paga(horas, coste)
 print("La paga es: ", paga)
+
+#dia
