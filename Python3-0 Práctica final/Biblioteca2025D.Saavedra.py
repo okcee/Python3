@@ -1,5 +1,5 @@
 '''Práctica Final del curso "Iniciación a la programación con Python (Enero-Marzo 2025)"
-Hecho por: David Saavedra Varela - okcee@hotmail.com'''
+Hecho por: D.Saavedra'''
 
 '''Script formato Python (.py) que permite registrar libros y gestionar préstamos a usuarios.'''
 '''Estructura del Código:
