@@ -65,7 +65,7 @@ class MaquinaSnacks:
     def agregar_snack(self):
         nombre = input('Nombre del snack: ')
         precio = float(input('Precio del snack: '))
-        nuevo_snack = Snack(nombre, precio)
+        nuevo_snack = snack(nombre, precio)
         self.servicio_snacks.agregar_snack(nuevo_snack)
         print(f'Snack agregado: {nuevo_snack}')
 

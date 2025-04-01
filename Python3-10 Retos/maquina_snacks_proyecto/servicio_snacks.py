@@ -1,3 +1,7 @@
+import os.path
+
+from snack import Snack
+
 class ServicioSnacks:
     NOMBRE_ARCHIVO = "snacks.txt" # Definimos una variable constante y su valor inicial es la información de un archivo.
     
