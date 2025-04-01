@@ -33,7 +33,7 @@ class ServicioSnacks:
     def obtener_snacks(self):
         snacks = []
         try:
-            with opne(self.NOMBRE_ARCHIVO, "r") as archivo:
+            with open(self.NOMBRE_ARCHIVO, "r") as archivo:
                 for linea in archivo:
                     # Formato ID, "Nombre", Precio
                     id_snack, nombre, precio = linea.strip().split(",") # Se genera una tupla con los 3 valores del formato explicado
