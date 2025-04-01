@@ -11,4 +11,4 @@ class Snack: # Definimos la clase Snack
         return (f'Snack: id_Snack = {self.id_snack}, nombre = {self.nombre}, precio = {self.precio}')
     
     def escribir_snack(self): # Definimos el método escribir_snack
-        return f'{self.id_snack},{self.nombre},{self.precio}\n'
+        return f'{self.id_snack},{self.nombre},{self.precio}'

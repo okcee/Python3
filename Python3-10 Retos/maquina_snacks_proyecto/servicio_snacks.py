@@ -1,6 +1,6 @@
 import os.path
 
-from snack import Snack
+from maquina_snacks_proyecto.snack import Snack
 
 class ServicioSnacks:
     NOMBRE_ARCHIVO = "snacks.txt" # Definimos una variable constante y su valor inicial es la información de un archivo.
@@ -27,7 +27,7 @@ class ServicioSnacks:
     
     def guardar_snacks_archivo(self, snacks):
         try:
-            with open(self.NOMBRE_ARCHIVO, "a ") as archivo:
+            with open(self.NOMBRE_ARCHIVO, "a") as archivo:
                 for snack in snacks:
                     archivo.write(f'{snack.escribir_snack()}\n')
         except Exception as e:

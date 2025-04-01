@@ -1,3 +1,4 @@
+from maquina_snacks_proyecto.snack import Snack
 from maquina_snacks_proyecto.servicio_snacks import ServicioSnacks
 
 class MaquinaSnacks:
@@ -65,7 +66,7 @@ class MaquinaSnacks:
     def agregar_snack(self):
         nombre = input('Nombre del snack: ')
         precio = float(input('Precio del snack: '))
-        nuevo_snack = snack(nombre, precio)
+        nuevo_snack = Snack(nombre, precio)
         self.servicio_snacks.agregar_snack(nuevo_snack)
         print(f'Snack agregado: {nuevo_snack}')
 
