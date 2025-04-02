@@ -1,5 +1,8 @@
+from .snack import Snack  # El punto indica "en el mismo paquete" (importación relativa dentro del mismo paquete)
+from .servicio_snacks import ServicioSnacks
+'''En vez de:
 from maquina_snacks_proyecto.snack import Snack
-from maquina_snacks_proyecto.servicio_snacks import ServicioSnacks
+from maquina_snacks_proyecto.servicio_snacks import ServicioSnacks'''
 
 class MaquinaSnacks:
     def __init__(self):
