@@ -7,11 +7,18 @@
     "configurations": [
         {
             "name": "Python: Current File",
-            "type": "debugpy",
+            "type": "python",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "cwd": "${workspaceFolder}", // Asegúrate de que esto esté presente
+            "justMyCode": true
+        },
+        {
+            "name": "Python: maquina_snacks_app.py",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/@maquina_snacks_app.py",
+            "console": "integratedTerminal",
             "justMyCode": true
         }
     ]
