@@ -1,0 +1,24 @@
+EJEMPLO:
+
+S:\0 Repositorios okcee\Python3\Python3-10 Retos\
+└── maquina_snacks_proyecto\
+    ├── __init__.py
+    ├── maquina_snacks_app.py
+    ├── servicio_snacks.py
+    └── snack.py
+
+Pasos para ejecutar tu aplicación:
+
+- Abre tu terminal o línea de comandos.
+
+- Navega al directorio padre de maquina_snacks_proyecto: En tu caso, debes ir a:
+cd "S:\0 Repositorios okcee\Python3\Python3-10 Retos"    # (Asegúrate de usar comillas dobles si hay espacios en la ruta)
+
+
+- Ejecuta el script usando la sintaxis de módulo:
+python -m maquina_snacks_proyecto.maquina_snacks_app
+
+Explicación:
+
+python -m: Le dice a Python que ejecute un módulo.
+maquina_snacks_proyecto.maquina_snacks_app: Le dice a Python que busque el módulo maquina_snacks_app dentro del paquete maquina_snacks_proyecto. Como maquina_snacks_proyecto tiene el archivo __init__.py, Python lo reconoce como un paquete.
