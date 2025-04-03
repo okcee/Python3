@@ -24,17 +24,16 @@ class ServicioSnacks:
             Snack("Sandwich", 120)
         ]
         self.snacks.extend(snacks_iniciales)
-        self.guardar_snacks_archivo(snacks_iniciales)
+        self.guardar_snacks_archivo() # Se llama sin pasarle la lista, ya que se guarda la lista completa.
     
-    def guardar_snacks_archivo(self, snacks):
+    def guardar_snacks_archivo(self): # Se modifica para que no reciba parámetros
         try:
-            with open(self.NOMBRE_ARCHIVO, "a") as archivo:
-                for snack in snacks:
+            with open(self.NOMBRE_ARCHIVO, "a") as archivo: # Se cambia "a" por "w" para que sobreescriba el archivo
+                for snack in self.snacks:
                     archivo.write(f'{snack.escribir_snack()}\n')
         except Exception as e:
             print(f"Error al guardar los snacks en el archivo: {e}")
 
-    
     def obtener_snacks(self):
         snacks = []
         try:
@@ -49,9 +48,9 @@ class ServicioSnacks:
             print(f"Error al obtener los snacks del archivo: {e}")
         return snacks
     
-    def agreagar_snack(self, snack):
+    def agregar_snack(self, snack):
         self.snacks.append(snack)
-        self.guardar_snacks_archivo([snack]) # Convierte 
+        self.guardar_snacks_archivo() # Se llama sin pasarle la lista, ya que se guarda la lista completa.
     
     def mostrar_snacks(self):
         print("--- Lista de snacks en el inventario ---")
@@ -60,5 +59,3 @@ class ServicioSnacks:
     
     def get_snacks(self):
         return self.snacks
-    
-    

@@ -1,0 +1,7 @@
+1,Patatas,70
+2,Refresco,50
+3,Sandwich,120
+1,Patatas,70.0
+2,Refresco,50.0
+3,Sandwich,120.0
+4,Chocolate,60.0
