@@ -1,5 +1,7 @@
 asgiref==3.8.1
+debugpy==1.8.13
 Django==5.1.7
+pip-upgrade==0.0.6
 psycopg2==2.9.10
 psycopg2-binary==2.9.10
 python-decouple==3.8
