@@ -18,7 +18,7 @@ class AppCatalogoPeliculas:
                 4. Salir''')
                 opcion = int(input('Escribe tu opción (1-4): '))
                 if opcion == 1:
-                    nombre_pelicula = input('Dame el nombre de la película: ')
+                    nombre_pelicula = input('Introduce el nombre de la película: ')
                     pelicula = Pelicula(nombre_pelicula)
                     self.servicio_peliculas.agregar_pelicula(pelicula)
                 elif opcion == 2:
