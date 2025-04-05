@@ -1,8 +1,7 @@
-
+{
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-{
     "version": "0.2.0",
     "configurations": [
         {
@@ -11,15 +10,17 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "justMyCode": true
+            "cwd": "${fileDirname}", // Establece el directorio del archivo como directorio de trabajo
+            "python": "${command:python.interpreterPath}" // Utiliza el intérprete de Python seleccionado en VS Code
         },
         {
-            "name": "Python: maquina_snacks_app.py",
-            "type": "python",
+            "name": "Python: Current File (Debugger)",
+            "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/@maquina_snacks_app.py",
+            "program": "${file}",
             "console": "integratedTerminal",
-            "justMyCode": true
+            "cwd": "${fileDirname}", // Establece el directorio del archivo como directorio de trabajo
+            "python": "${command:python.interpreterPath}" // Utiliza el intérprete de Python seleccionado en VS Code
         }
     ]
 }
